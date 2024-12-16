@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>trhiep</title>
+</head>
+<body>
+	<h2>Đăng kí môn thi tốt nghiệp</h2>
+	<fieldset>
+		<form>
+			<label for="ten">Họ và tên: </label>
+			<input type="text" name="ten" id="ten" required><br>
+
+			<label for="cccd">CCCD: </label>
+			<input type="number" name="cccd" id="cccd" required><br>
+
+			<label>Ngày sinh: </label>
+			<input type="date" name="ngaysinh" required><br>
+
+			<label>Giới tính: </label>
+			<select>
+				<option>Nam</option>
+				<option>Nữ</option>
+
+
+			</select><br>
+			<label>Môn thi: </label>
+			<input type="checkbox" name="môn" value="Toán" id="toan">
+			<label for="toan">Toán</label>
+
+			<input type="checkbox" name="môn" value="Văn" id="van">
+			<label for="van">Ngữ Văn</label>
+
+			<input type="checkbox" name="môn" value="Anh" id="anh">
+			<label for="anh">Anh</label><br>
+
+			<label>Nhập file: </label>
+			<input type="file" name="file"><br>
+
+			<input type="submit" name="gửi thông tin">		
+		</form>
+	</fieldset>
+
+
+<style type="text/css">
+	fieldset{
+		color: red;
+		line-height: 1.5em;
+		text-align: center;
+		background-color: lightgreen;
+
+	}
+	h2{
+		text-align: center;
+		line-height: 2em;
+		color: cadetblue;
+		background-color: lightcoral;
+	}
+	label {
+		color: gray;
+	}
+</style>
+
+</body>
+</html>
+
