@@ -91,6 +91,38 @@
 
     </style>
     <script>
+        // Vô hiệu hóa chuột phải
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Chặn các phím DevTools
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+                (e.ctrlKey && e.key === 'U')
+            ) {
+                e.preventDefault();
+                alert('Chức năng này đã bị vô hiệu hóa!');
+            }
+        });
+
+        // Phát hiện mở DevTools
+        const detectDevTools = () => {
+            const threshold = 160;
+            setInterval(() => {
+                const widthDiff = window.outerWidth - window.innerWidth > threshold;
+                const heightDiff = window.outerHeight - window.innerHeight > threshold;
+                if (widthDiff || heightDiff) {
+                    alert('Đã phát hiện DevTools! Trang sẽ tự động đóng.');
+                    window.location.href = 'about:blank'; // Hoặc chuyển hướng khác
+                }
+            }, 1000);
+        };
+        detectDevTools();
+    </script>
+    <script>
         function getQueryParam() {
             const urlParams = new URLSearchParams(window.location.search);
             const key = urlParams.get('key');
