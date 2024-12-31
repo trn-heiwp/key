@@ -16,7 +16,8 @@
             background-color: #f0f0f0;
         }
         h1 {
-            color: #333;
+            color: #669900;
+            text-align: center;
         }
         #output {
             margin: 20px;
@@ -40,6 +41,17 @@
         }
         #copyButton:hover {
             background-color: #0056b3;
+        }
+        .trhh {
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 22px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            width: 78%;
+            height: 80px auto;
+            max-width: 400px;
         }
     </style>
     <script>
@@ -75,8 +87,10 @@
     </script>
 </head>
 <body onload="getQueryParam()">
-    <h1>Code Lấy Key By TrHiep</h1>
-    <p id="output">Loading...</p>
-    <button id="copyButton" style="display:none;" onclick="copyToClipboard()">Copy Key</button>
+    <div class='trhh'>
+        <h1>Web Key By TrHiep</h1>
+        <p id="output">Loading...</p>
+        <button id="copyButton" style="display:none;" onclick="copyToClipboard()">Copy Key</button>
+    </div>
 </body>
 </html>
